@@ -1,44 +1,144 @@
-document.getElementById("formUcapan").addEventListener("submit", function (e) {
-  e.preventDefault();
+// Initialize messages array
+let messages = [];
 
-  const nama = document.getElementById("inputNama").value;
-  const ucapan = document.getElementById("inputUcapan").value;
-  const kehadiran = document.querySelector(
-    'input[name="kehadiran"]:checked'
-  ).value;
+// Pastikan DOM sudah siap
+document.addEventListener("DOMContentLoaded", function () {
+  // Form submission handler
+  const form = document.getElementById("formUcapan");
 
-  const messageHTML = `
-        <div class="bg-black/60 backdrop-blur-sm border border-white/30 rounded-xl p-4 text-white mb-4">
-            <div class="font-semibold text-[#FFE2B9]">${nama}</div>
-            <div class="mt-1">${ucapan}</div>
-            <div class="mt-2 text-sm text-white/70">
-                <span class="inline-block px-2 py-1 bg-[#FFE2B9]/10 rounded-full">${kehadiran}</span>
-                <span class="ml-2">${new Date().toLocaleString()}</span>
-            </div>
-        </div>
-    `;
+  if (form) {
+    form.addEventListener("submit", function (e) {
+      e.preventDefault(); // Prevent default form submission
 
-  document
-    .getElementById("listUcapan")
-    .insertAdjacentHTML("afterbegin", messageHTML);
-  this.reset();
+      // Get form values
+      const nama = document.getElementById("inputNama").value.trim();
+      const ucapan = document.getElementById("inputUcapan").value.trim();
+      const kehadiran = document.querySelector(
+        'input[name="kehadiran"]:checked'
+      );
+
+      // Validasi input
+      if (!nama || !ucapan || !kehadiran) {
+        alert("Mohon isi semua field yang diperlukan");
+        return;
+      }
+
+      // Create new message object
+      const newMessage = {
+        id: Date.now(),
+        name: nama,
+        message: ucapan,
+        attendance: kehadiran.value,
+      };
+
+      // Add to messages array
+      messages.unshift(newMessage);
+
+      // Update display
+      renderMessages();
+
+      // Reset form
+      form.reset();
+
+      // Log untuk debugging
+      console.log("Pesan baru ditambahkan:", newMessage);
+      console.log("Semua pesan:", messages);
+    });
+  } else {
+    console.error("Form tidak ditemukan!");
+  }
 });
 
-// Save to localStorage
-function saveMessages() {
-    localStorage.setItem('messages', JSON.stringify(messages));
+// Function to render messages
+// Function to render messages
+function renderMessages() {
+  const container = document.getElementById("listUcapan");
+  if (!container) {
+    console.error("Container ucapan tidak ditemukan!");
+    return;
+  }
+
+  container.innerHTML = messages
+    .map((msg) => {
+      // Garis pemisah jika pesan lebih dari 100 kata
+      const separator =
+        msg.message.split(/\s+/).length > 100 ? '<hr class="separator" />' : "";
+
+      return `
+          <div class="bg-black/40 border border-white/20 rounded-xl p-6 backdrop-blur-sm mb-4 transition-all">
+            <div class="space-y-2">
+                <div class="flex items-center justify-between mx-8">
+                    <h3 class="font-semibold text-[#FFE2B9]">${msg.name}</h3>
+                    <span class="text-sm text-[#FFE2B9] italic">
+                        ${
+                          msg.attendance === "Hadir"
+                            ? "Hadir"
+                            : msg.attendance === "Tidak Hadir"
+                            ? "Tidak hadir"
+                            : "Masih Ragu"
+                        }
+                    </span>
+                </div>
+                <!-- Tambahkan break-words dan word-break -->
+                <p class="text-white/80 break-words leading-relaxed" style="word-break: break-word; overflow-wrap: break-word;">
+                  ${msg.message}
+                </p>
+                ${separator}
+            </div>
+        </div>
+        `;
+    })
+    .join("");
 }
 
-// Load from localStorage
-function loadMessages() {
-    const saved = localStorage.getItem('messages');
-    if (saved) {
-        messages = JSON.parse(saved);
-        messages.forEach(message => displayMessage(message));
+// Input validation
+const inputNama = document.getElementById("inputNama");
+const inputUcapan = document.getElementById("inputUcapan");
+
+if (inputNama && inputUcapan) {
+  inputNama.addEventListener("input", function () {
+    if (this.value.length > 50) {
+      this.value = this.value.slice(0, 50);
     }
+  });
+
+  inputUcapan.addEventListener("input", function () {
+    if (this.value.length > 200) {
+      this.value = this.value.slice(0, 200);
+    }
+  });
 }
 
-// Call loadMessages on page load
-document.addEventListener('DOMContentLoaded', loadMessages);
+// Styles
+const styleSheet = document.createElement("style");
+styleSheet.textContent = `
+    #listUcapan {
+        padding: 1rem;
+        scrollbar-color: #00000  ;
+    }
 
-// Add saveMessages() after messages.push() in form submit handler
+    /* Styling Scrollbar */
+    #listUcapan::-webkit-scrollbar {
+        width: 6px;
+    }
+
+    #listUcapan::-webkit-scrollbar-track {
+        background: #9E8C73 ; /* Warna track scrollbar */
+        border-radius: 3px;
+    }
+
+    #listUcapan::-webkit-scrollbar-thumb {
+        border-radius: 3px;
+    }
+
+    /* Animasi FadeIn */
+    @keyframes fadeIn {
+        from { opacity: 0; transform: translateY(10px); }
+        to { opacity: 1; transform: translateY(0); }
+    }
+
+    #listUcapan > div {
+        animation: fadeIn 0.3s ease-out;
+    }
+`;
+document.head.appendChild(styleSheet);
