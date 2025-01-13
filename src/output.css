@@ -2625,6 +2625,10 @@ details.collapse summary::-webkit-details-marker {
   bottom: -1.75rem;
 }
 
+.-left-0 {
+  left: -0px;
+}
+
 .-left-2 {
   left: -0.5rem;
 }
@@ -2677,12 +2681,12 @@ details.collapse summary::-webkit-details-marker {
   top: 0.5rem;
 }
 
-.top-24 {
-  top: 6rem;
+.top-20 {
+  top: 5rem;
 }
 
-.top-48 {
-  top: 12rem;
+.top-24 {
+  top: 6rem;
 }
 
 .top-\[300px\] {
@@ -2693,36 +2697,12 @@ details.collapse summary::-webkit-details-marker {
   top: 100%;
 }
 
-.top-56 {
-  top: 14rem;
-}
-
-.top-20 {
-  top: 5rem;
-}
-
-.-z-0 {
-  z-index: 0;
-}
-
 .-z-10 {
   z-index: -10;
 }
 
 .z-50 {
   z-index: 50;
-}
-
-.z-0 {
-  z-index: 0;
-}
-
-.z-10 {
-  z-index: 10;
-}
-
-.-z-30 {
-  z-index: -30;
 }
 
 .mx-2 {
@@ -2845,6 +2825,14 @@ details.collapse summary::-webkit-details-marker {
 
 .mt-\[135px\] {
   margin-top: 135px;
+}
+
+.mt-0 {
+  margin-top: 0px;
+}
+
+.mb-5 {
+  margin-bottom: 1.25rem;
 }
 
 .block {
@@ -3793,8 +3781,8 @@ details.collapse summary::-webkit-details-marker {
     bottom: -0.25rem;
   }
 
-  .md\:bottom-2 {
-    bottom: 0.5rem;
+  .md\:-bottom-2 {
+    bottom: -0.5rem;
   }
 
   .md\:top-20 {
@@ -3821,6 +3809,10 @@ details.collapse summary::-webkit-details-marker {
 
   .md\:w-1\/2 {
     width: 50%;
+  }
+
+  .md\:w-\[200px\] {
+    width: 200px;
   }
 
   .md\:w-\[250px\] {
