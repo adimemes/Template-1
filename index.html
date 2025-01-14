@@ -18,8 +18,8 @@
         rel="stylesheet">
     <script src="./node_modules/preline/dist/preline.js"></script>
     <!-- Animasi -->
-    <link href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css" rel="stylesheet">
-    <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+
 </head>
 
 <body class="overflow-hidden scroll-smooth">
@@ -34,9 +34,9 @@
                 <div class="max-w-md w-full flex flex-col items-center">
                     <h1 class="text-5xl font-great-vibes">Raja & Shyta</h1>
                     <p class="text-lg mt-5 font-montserrat">31 Desember 2024</p>
-                    <h4 class="font-montserrat mt-2 mb-5"> Dear <span id="guest-name"></span></h4>
+                    <h4 class="font-montserrat mt-2"> Dear <span id="guest-name"></span></h4>
                     <button id="openBtn"
-                        class="mt-0 flex font-montserrat items-center justify-center gap-2 rounded-full border border-gold bg-gradient-to-r from-gold to-brown bg-brown px-6 py-3 text-center text-sm font-medium text-black hover:bg-gold hover:ring-1 hover:ring-brown focus:outline-none focus:ring active:text-brown">
+                        class="mt-5 flex font-montserrat items-center justify-center gap-2 rounded-full border border-gold bg-gradient-to-r from-gold to-brown bg-brown px-6 py-3 text-center text-sm font-medium text-black hover:bg-gold hover:ring-1 hover:ring-brown focus:outline-none focus:ring active:text-brown">
                         <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                             <path
                                 d="M3 12C3 8.22876 3 6.34315 4.17157 5.17157C5.34315 4 7.22876 4 11 4H13C16.7712 4 18.6569 4 19.8284 5.17157C21 6.34315 21 8.22876 21 12C21 15.7712 21 17.6569 19.8284 18.8284C18.6569 20 16.7712 20 13 20H11C7.22876 20 5.34315 20 4.17157 18.8284C3 17.6569 3 15.7712 3 12Z"
@@ -264,11 +264,11 @@
         <div class=" flex items-center w-full max-w-md  mx-auto  mt-[-10px]">
             <div class="relative mx-6">
                 <!-- Gambar -->
-                <img src="./Asset/image.png" alt="Hari Bahagia" class="w-full h-auto rounded-xl " data-aos="zoom-in">
+                <img src="./Asset/image.png" alt="Hari Bahagia" class="w-full h-auto rounded-xl ">
 
                 <!-- Overlay dan Konten -->
-                <div class="absolute inset-0 bg-opacity-30 flex flex-col justify-center items-center text-white px-4 font-montserrat simply-countdown"
-                    data-aos="zoom-in">
+                <div
+                    class="absolute inset-0 bg-opacity-30 flex flex-col justify-center items-center text-white px-4 font-montserrat simply-countdown">
                     <!-- Timer -->
                     <div class="mt-[135px] md:mt-[150px] grid grid-cols-4 gap-6 text-center">
                         <!-- Hari -->
@@ -304,7 +304,7 @@
                 Hari Bahagia
             </h1>
         </div>
-        <div class="mt-10 max-w-6xl mx-2 md:mx-10" data-aos="fade-up">
+        <div class="mt-10 max-w-6xl mx-2 md:mx-10">
             <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-2 gap-2">
                 <!-- Gambar Galeri -->
                 <a href="Asset/gung raja nengok gung gek.png" class="popup-link">
@@ -382,7 +382,7 @@
         <div class="bg-white/10 border border-white/20 rounded-xl p-6 shadow-lg font-montserrat mx-4 md:mx-auto md:w-1/2"
             data-aos="zoom-in">
             <form id="formUcapan" class="space-y-6">
-                <div class="absolute -z-10 -bottom-0 md:-bottom-2 -left-0 w-[200px] md:w-[200px]">
+                <div class="absolute -z-10 -bottom-0 md:-bottom-2 -left-1 w-[200px] md:w-[200px]">
                     <img src="./Asset/vector/bunga mekar.svg" alt="Dekorasi bunga kiri" class="w-full h-auto">
                 </div>
                 <!-- Input Nama -->
@@ -437,7 +437,6 @@
         </div>
         <!-- Bunga form -->
         <div class="absolute  -bottom-7 md:-bottom-1  right-2 w-[170px] md:w-[250px] " data-aos="fade-up">
-            <!-- Naikkan dekorasi -->
             <img src="./Asset/vector/bunga mekar 2.svg" alt="Dekorasi bunga kanan" class="w-full h-auto">
         </div>
         <!-- Bunga Form END -->
@@ -449,8 +448,8 @@
     <section class="bg-black pt-9 pb-16">
         <h1 class="text-center text-4xl md:text-5xl mb-6 font-great-vibes text-[#FFE2B9]" data-aos="zoom-in">Amplop
             Digital</h1>
-        <div class="flex flex-col items-center gap-4 p-6">
-            <p class="text-center text-sm text-white mb-4 font-montserrat" data-aos="zoom-in">
+        <div class="flex flex-col items-center gap-4 p-6" data-aos="fade-up">
+            <p class="text-center text-sm text-white mb-4 font-montserrat">
                 Doa restu anda merupakan karunia yang sangat berarti bagi kami. <br> Namun jika memberi adalah ungkapan
                 tanda
                 kasih, anda dapat memberi kado secara cashless.
@@ -458,8 +457,7 @@
 
             <div class="flex flex-col gap-4 w-full max-w-md font-montserrat text-white">
                 <!-- Card 1 -->
-                <div class="relative bg-white/20 border border-white/30 rounded-xl p-6 shadow-lg w-full"
-                    data-aos="fade-up">
+                <div class="relative bg-white/20 border border-white/30 rounded-xl p-6 shadow-lg w-full">
                     <div class="flex items-center justify-between">
                         <div>
                             <p class="text-xl font-bold mt-10 rekening">744534283</p>
@@ -474,8 +472,7 @@
                 </div>
 
                 <!-- Card 2 -->
-                <div class="relative bg-white/20 border border-white/30 rounded-xl p-6 shadow-lg w-full"
-                    data-aos="fade-up">
+                <div class="relative bg-white/20 border border-white/30 rounded-xl p-6 shadow-lg w-full">
                     <div class="flex items-center justify-between">
                         <div>
                             <p class="text-xl font-bold mt-10 rekening">744534283</p>
@@ -564,6 +561,8 @@
     <script src="./src/tamu_Undangan.js"></script>
     <script src="./src/data.js"></script>
     <script src="./src/tanggal.js"></script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+
     <script>
         if (window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches) {
             document.body.style.backgroundColor = "#ffffff";
@@ -571,12 +570,12 @@
         }
 
         // Animasi
-        document.addEventListener('DOMContentLoaded', function () {
-            AOS.init({
-                duration: 2000, // Durasi animasi (dalam ms)
-                once: false,     // Animasi hanya berjalan satu kali saat elemen terlihat
-            });
+        AOS.init({
+            once: true, // Animasi hanya berjalan sekali
+            duration: 1000, // Durasi animasi dalam milidetik
+            easing: 'ease-in-out', // Gerakan animasi lebih halus
         });
+
     </script>
 </body>
 
