@@ -2629,10 +2629,6 @@ details.collapse summary::-webkit-details-marker {
   bottom: -1.75rem;
 }
 
-.-left-0 {
-  left: -0px;
-}
-
 .-left-2 {
   left: -0.5rem;
 }
@@ -2705,8 +2701,16 @@ details.collapse summary::-webkit-details-marker {
   left: -0.25rem;
 }
 
-.-left-4 {
-  left: -1rem;
+.bottom-0 {
+  bottom: 0px;
+}
+
+.-left-\[6\] {
+  left: -6;
+}
+
+.-left-\[6px\] {
+  left: -6px;
 }
 
 .-z-10 {
@@ -2775,10 +2779,6 @@ details.collapse summary::-webkit-details-marker {
   margin-bottom: 1rem;
 }
 
-.mb-5 {
-  margin-bottom: 1.25rem;
-}
-
 .mb-6 {
   margin-bottom: 1.5rem;
 }
@@ -2793,10 +2793,6 @@ details.collapse summary::-webkit-details-marker {
 
 .ms-2 {
   margin-inline-start: 0.5rem;
-}
-
-.mt-0 {
-  margin-top: 0px;
 }
 
 .mt-0\.5 {
@@ -2932,6 +2928,26 @@ details.collapse summary::-webkit-details-marker {
   height: auto;
 }
 
+.h-\[40px\] {
+  height: 40px;
+}
+
+.h-\[px\] {
+  height: px;
+}
+
+.h-\[200px\] {
+  height: 200px;
+}
+
+.h-\[100px\] {
+  height: 100px;
+}
+
+.h-\[150px\] {
+  height: 150px;
+}
+
 .max-h-\[400px\] {
   max-height: 400px;
 }
@@ -2994,6 +3010,18 @@ details.collapse summary::-webkit-details-marker {
 
 .w-full {
   width: 100%;
+}
+
+.w-\[100px\] {
+  width: 100px;
+}
+
+.w-\[0px\] {
+  width: 0px;
+}
+
+.w-\[40px\] {
+  width: 40px;
 }
 
 .max-w-6xl {
@@ -3062,6 +3090,10 @@ details.collapse summary::-webkit-details-marker {
 
 .grid-cols-1 {
   grid-template-columns: repeat(1, minmax(0, 1fr));
+}
+
+.grid-cols-2 {
+  grid-template-columns: repeat(2, minmax(0, 1fr));
 }
 
 .grid-cols-4 {
@@ -3680,10 +3712,6 @@ details.collapse summary::-webkit-details-marker {
   transition-duration: 500ms;
 }
 
-.duration-300 {
-  transition-duration: 300ms;
-}
-
 .ease-in-out {
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
@@ -3787,31 +3815,8 @@ details.collapse summary::-webkit-details-marker {
 }
 
 @media (min-width: 640px) {
-  .sm\:h-6 {
-    height: 1.5rem;
-  }
-
-  .sm\:w-6 {
-    width: 1.5rem;
-  }
-
   .sm\:grid-cols-2 {
     grid-template-columns: repeat(2, minmax(0, 1fr));
-  }
-
-  .sm\:text-5xl {
-    font-size: 3rem;
-    line-height: 1;
-  }
-
-  .sm\:text-base {
-    font-size: 1rem;
-    line-height: 1.5rem;
-  }
-
-  .sm\:text-lg {
-    font-size: 1.125rem;
-    line-height: 1.75rem;
   }
 }
 
@@ -3850,6 +3855,14 @@ details.collapse summary::-webkit-details-marker {
     margin-top: 150px;
   }
 
+  .md\:h-\[400\] {
+    height: 400;
+  }
+
+  .md\:h-\[400px\] {
+    height: 400px;
+  }
+
   .md\:w-1\/2 {
     width: 50%;
   }
@@ -3868,6 +3881,18 @@ details.collapse summary::-webkit-details-marker {
 
   .md\:w-auto {
     width: auto;
+  }
+
+  .md\:w-\[\] {
+    width: ;
+  }
+
+  .md\:w-\[400\] {
+    width: 400;
+  }
+
+  .md\:w-\[400px\] {
+    width: 400px;
   }
 
   .md\:text-5xl {
@@ -3893,11 +3918,6 @@ details.collapse summary::-webkit-details-marker {
   .md\:text-xs {
     font-size: 0.75rem;
     line-height: 1rem;
-  }
-
-  .md\:text-6xl {
-    font-size: 3.75rem;
-    line-height: 1;
   }
 }
 

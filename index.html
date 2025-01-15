@@ -19,6 +19,12 @@
     <script src="./node_modules/preline/dist/preline.js"></script>
     <!-- Animasi -->
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <style>
+        [data-aos] {
+            transform: none !important;
+            overflow: visible !important;
+        }
+    </style>
 
 </head>
 
@@ -61,7 +67,7 @@
     background-repeat: no-repeat;">
         <div class="container mx-auto px-4 py-12">
             <!-- Kata Sambutan -->
-            <div data-aos="zoom-in">
+            <div>
                 <h1 class="text-5xl text-center font-great-vibes" style="color: #9F5D00">
                     Om Swastyastu</h1>
                 <p class=" mt-2 text-sm text-center font-montserrat">Atas Asung Kertha Wara Nugraha Ida Sang Hyang Widhi
@@ -77,20 +83,23 @@
                     <!-- Profile Mempelai Laki -->
                     <div class="group relative  rounded-xl p-8 text-center">
                         <div class="relative inline-block">
-                            <div class="mx-auto" data-aos="zoom-in">
+                            <div class="mx-auto" data-aos="fade-up">
                                 <img src="Asset/gung raja.png" width="250" height="250" alt="Mempelai Laki-Laki"
                                     class="max-w-full mx-auto lg:ml-0 ">
+                                <!-- bunga -->
+                                <div class="absolute -bottom-10 -left-8 transform translate-x-1" data-aos="fade-up"
+                                    data-aos-delay="200">
+                                    <span><img src="Asset/vector/image-from-rawpixel-id-12929677-png 1.svg"
+                                            alt=""></span>
+                                </div>
+                                <!-- Bungan End -->
                             </div>
-                            <!-- bunga -->
-                            <div class="absolute -bottom-10 -left-8 transform translate-x-1" data-aos="zoom-in">
-                                <span><img src="Asset/vector/image-from-rawpixel-id-12929677-png 1.svg" alt=""></span>
-                            </div>
-                            <!-- Bungan End -->
                         </div>
 
                         <!-- Profile Info -->
                         <div class="mt-6">
-                            <h3 class="text-5xl font-great-vibes" style="color: #9F5D00" data-aos="zoom-in">
+                            <h3 class="text-5xl font-great-vibes" style="color: #9F5D00" data-aos="zoom-in"
+                                data-aos-delay="250">
                                 Gung Raja
                             </h3>
 
@@ -262,7 +271,7 @@
         </div>
         <!-- Countdown -->
         <div class=" flex items-center w-full max-w-md  mx-auto  mt-[-10px]">
-            <div class="relative mx-6">
+            <div class="relative mx-6" data-aos="zoom-in">
                 <!-- Gambar -->
                 <img src="./Asset/image.png" alt="Hari Bahagia" class="w-full h-auto rounded-xl ">
 
@@ -305,47 +314,56 @@
             </h1>
         </div>
         <div class="mt-10 max-w-6xl mx-2 md:mx-10">
-            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-2 gap-2">
+            <div class="grid grid-cols-2 sm:grid-cols-2 lg:grid-cols-2 gap-2">
                 <!-- Gambar Galeri -->
-                <a href="Asset/gung raja nengok gung gek.png" class="popup-link">
+                <a href="Asset/gung raja nengok gung gek.png" class="popup-link" data-aos="fade-up" data-aos-delay="0">
                     <img src="./Asset/gung raja nengok gung gek.png" alt="Gallery Image 1"
-                        class="h-[400px] w-[400px] object-cover rounded-lg shadow-md">
+                        class="h-[150px] w-[150px] md:h-[400px] md:w-[400px] object-cover rounded-lg shadow-md">
                 </a>
-                <a href="./Asset/gung raja nengok gung gek.png" class="popup-link">
+                <a href="./Asset/gung raja nengok gung gek.png" class="popup-link" data-aos="fade-up"
+                    data-aos-delay="0">
                     <img src="./Asset/gung raja nengok gung gek.png" alt="Gallery Image 2"
-                        class="h-[400px] w-[400px] object-cover rounded-lg shadow-md">
+                        class="h-[150px] w-[150px] md:h-[400px] md:w-[400px] object-cover rounded-lg shadow-md">
                 </a>
-                <a href="./Asset/gung raja nengok gung gek.png" class="popup-link">
+                <a href="./Asset/gung raja nengok gung gek.png" class="popup-link" data-aos="fade-up"
+                    data-aos-delay="100">
                     <img src="./Asset/gung raja nengok gung gek.png" alt="Gallery Image 3"
-                        class="h-[400px] w-[400px] object-cover rounded-lg shadow-md">
+                        class="h-[150px] w-[150px] md:h-[400px] md:w-[400px] object-cover rounded-lg shadow-md">
                 </a>
-                <a href="./Asset/gung raja nengok gung gek.png" class="popup-link">
+                <a href="./Asset/gung raja nengok gung gek.png" class="popup-link" data-aos="fade-up"
+                    data-aos-delay="100">
                     <img src="./Asset/gung raja nengok gung gek.png" alt="Gallery Image 1"
-                        class="h-[400px] w-[400px] object-cover rounded-lg shadow-md">
+                        class="h-[150px] w-[150px] md:h-[400px] md:w-[400px] object-cover rounded-lg shadow-md">
                 </a>
-                <a href="./Asset/gung raja nengok gung gek.png" class="popup-link">
+                <a href="./Asset/gung raja nengok gung gek.png" class="popup-link" data-aos="fade-up"
+                    data-aos-delay="200">
                     <img src="./Asset/gung raja nengok gung gek.png" alt="Gallery Image 2"
-                        class="h-[400px] w-[400px] object-cover rounded-lg shadow-md">
+                        class="h-[150px] w-[150px] md:h-[400px] md:w-[400px] object-cover rounded-lg shadow-md">
                 </a>
-                <a href="./Asset/gung raja nengok gung gek.png" class="popup-link">
+                <a href="./Asset/gung raja nengok gung gek.png" class="popup-link" data-aos="fade-up"
+                    data-aos-delay="200">
                     <img src="./Asset/gung raja nengok gung gek.png" alt="Gallery Image 3"
-                        class="h-[400px] w-[400px] object-cover rounded-lg shadow-md">
+                        class="h-[150px] w-[150px] md:h-[400px] md:w-[400px] object-cover rounded-lg shadow-md">
                 </a>
-                <a href="./Asset/gung raja nengok gung gek.png" class="popup-link">
+                <a href="./Asset/gung raja nengok gung gek.png" class="popup-link" data-aos="fade-up"
+                    data-aos-delay="300">
                     <img src="./Asset/gung raja nengok gung gek.png" alt="Gallery Image 1"
-                        class="h-[400px] w-[400px] object-cover rounded-lg shadow-md">
+                        class="h-[150px] w-[150px] md:h-[400px] md:w-[400px] object-cover rounded-lg shadow-md">
                 </a>
-                <a href="./Asset/gung raja nengok gung gek.png" class="popup-link">
+                <a href="./Asset/gung raja nengok gung gek.png" class="popup-link" data-aos="fade-up"
+                    data-aos-delay="300">
                     <img src="./Asset/gung raja nengok gung gek.png" alt="Gallery Image 2"
-                        class="h-[400px] w-[400px] object-cover rounded-lg shadow-md">
+                        class="h-[150px] w-[150px] md:h-[400px] md:w-[400px] object-cover rounded-lg shadow-md">
                 </a>
-                <a href="./Asset/gung raja nengok gung gek.png" class="popup-link">
+                <a href="./Asset/gung raja nengok gung gek.png" class="popup-link" data-aos="fade-up"
+                    data-aos-delay="400">
                     <img src="./Asset/gung raja nengok gung gek.png" alt="Gallery Image 3"
-                        class="h-[400px] w-[400px] object-cover rounded-lg shadow-md">
+                        class="h-[150px] w-[150px] md:h-[400px] md:w-[400px] object-cover rounded-lg shadow-md">
                 </a>
-                <a href="./Asset/gung raja nengok gung gek.png" class="popup-link">
+                <a href="./Asset/gung raja nengok gung gek.png" class="popup-link" data-aos="fade-up"
+                    data-aos-delay="400">
                     <img src="./Asset/gung raja nengok gung gek.png" alt="Gallery Image 3"
-                        class="h-[400px] w-[400px] object-cover rounded-lg shadow-md">
+                        class="h-[150px] w-[150px] md:h-[400px] md:w-[400px] object-cover rounded-lg shadow-md">
                 </a>
                 <!-- Tambahkan lebih banyak gambar sesuai kebutuhan -->
             </div>
@@ -376,13 +394,14 @@
 
         <!-- Form -->
         <div class="mt-8 mb-6 container mx-auto px-4">
-            <h1 class="text-4xl md:text-5xl text-center font-great-vibes text-[#FFE2B9]" data-aos="fade-up">Mohon Doa
+            <h1 class="text-4xl md:text-5xl text-center font-great-vibes text-[#FFE2B9]" data-aos="fade-up"
+                data-aos-delay="450">Mohon Doa
                 Restu</h1>
         </div>
-        <div class="bg-white/10 border border-white/20 rounded-xl p-6 shadow-lg font-montserrat mx-4 md:mx-auto md:w-1/2"
-            data-aos="zoom-in">
+        <div
+            class="bg-white/10 border border-white/20 rounded-xl p-6 shadow-lg font-montserrat mx-4 md:mx-auto md:w-1/2">
             <form id="formUcapan" class="space-y-6">
-                <div class="absolute -z-10 -bottom-0 md:-bottom-2 -left-1 w-[200px] md:w-[200px]">
+                <div class="absolute -z-10 -bottom-0 md:-bottom-2 -left-[6px] w-[200px] md:w-[200px]">
                     <img src="./Asset/vector/bunga mekar.svg" alt="Dekorasi bunga kiri" class="w-full h-auto">
                 </div>
                 <!-- Input Nama -->
@@ -429,14 +448,14 @@
             </form>
         </div>
 
-        <div class="mt-8 max-w-xl mx-9 p-6 container" data-aos="fade-in">
+        <div class="mt-8 max-w-xl mx-9 p-6 container">
             <h2 class="text-center text-4xl md:text-5xl mb-6 font-great-vibes text-[#FFE2B9]">Ucapan Doa</h2>
             <div id="listUcapan" class="space-y-4 max-h-[400px] overflow-y-auto">
                 <!-- Ucapan akan ditambahkan di sini -->
             </div>
         </div>
         <!-- Bunga form -->
-        <div class="absolute  -bottom-7 md:-bottom-1  right-2 w-[170px] md:w-[250px] " data-aos="fade-up">
+        <div class="absolute  -bottom-7 md:-bottom-1  right-2 w-[170px] md:w-[250px]">
             <img src="./Asset/vector/bunga mekar 2.svg" alt="Dekorasi bunga kanan" class="w-full h-auto">
         </div>
         <!-- Bunga Form END -->
